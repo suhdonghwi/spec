@@ -177,7 +177,6 @@ New instances of :ref:`functions <syntax-funcinst>`, :ref:`tables <syntax-tablei
 6. Return :math:`a`.
 
 .. math::
-   ~\\[-1ex]
    \begin{array}{rlll}
    \allocfunc(S, \func, \moduleinst) &=& S', \funcaddr \\[1ex]
    \mbox{where:} \hfill \\
@@ -205,7 +204,6 @@ New instances of :ref:`functions <syntax-funcinst>`, :ref:`tables <syntax-tablei
 5. Return :math:`a`.
 
 .. math::
-   ~\\[-1ex]
    \begin{array}{rlll}
    \allochostfunc(S, \functype, \hostfunc) &=& S', \funcaddr \\[1ex]
    \mbox{where:} \hfill \\
@@ -507,7 +505,6 @@ and list of :ref:`reference <syntax-ref>` vectors for the module's :ref:`element
 
 
 .. math::
-   ~\\
    \begin{array}{rlll}
    \allocmodule(S, \module, \externval_{\F{im}}^\ast, \val^\ast, (\reff^\ast)^\ast) &=& S', \moduleinst
    \end{array}
@@ -700,7 +697,6 @@ It is up to the :ref:`embedder <embedder>` to define how such conditions are rep
 
 
 .. math::
-   ~\\
    \begin{array}{@{}rcll}
    \instantiate(S, \module, \externval^k) &=& S'; F;
      \begin{array}[t]{@{}l@{}}
@@ -804,7 +800,6 @@ Once the function has returned, the following steps are executed:
 The values :math:`\val_{\F{res}}^m` are returned as the results of the invocation.
 
 .. math::
-   ~\\[-1ex]
    \begin{array}{@{}lcl}
    \invoke(S, \funcaddr, \val^n) &=& S; F; \val^n~(\INVOKE~\funcaddr) \\
      &(\iff & S.\SFUNCS[\funcaddr].\FITYPE = [t_1^n] \to [t_2^m] \\

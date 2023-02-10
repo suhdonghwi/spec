@@ -264,7 +264,6 @@ Limits
   * :math:`m_1` is smaller than or equal to :math:`m_2`.
 
 .. math::
-   ~\\[-1ex]
    \frac{
      n_1 \geq n_2
    }{
@@ -292,7 +291,6 @@ An :ref:`external type <syntax-externtype>` :math:`\ETFUNC~\functype_1` matches 
 * Both :math:`\functype_1` and :math:`\functype_2` are the same.
 
 .. math::
-   ~\\[-1ex]
    \frac{
    }{
      \vdashexterntypematch \ETFUNC~\functype \matchesexterntype \ETFUNC~\functype
@@ -348,7 +346,6 @@ An :ref:`external type <syntax-externtype>` :math:`\ETGLOBAL~\globaltype_1` matc
 * Both :math:`\globaltype_1` and :math:`\globaltype_2` are the same.
 
 .. math::
-   ~\\[-1ex]
    \frac{
    }{
      \vdashexterntypematch \ETGLOBAL~\globaltype \matchesexterntype \ETGLOBAL~\globaltype

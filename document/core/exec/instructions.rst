@@ -1174,7 +1174,6 @@ Table Instructions
 10. Push the value :math:`\val` to the stack.
 
 .. math::
-   ~\\[-1ex]
    \begin{array}{l}
    \begin{array}{lcl@{\qquad}l}
    S; F; (\I32.\CONST~i)~(\TABLEGET~x) &\stepto& S; F; \val
@@ -1219,7 +1218,6 @@ Table Instructions
 11. Replace the element :math:`\X{tab}.\TIELEM[i]` with :math:`\val`.
 
 .. math::
-   ~\\[-1ex]
    \begin{array}{l}
    \begin{array}{lcl@{\qquad}l}
    S; F; (\I32.\CONST~i)~\val~(\TABLESET~x) &\stepto& S'; F; \epsilon
@@ -1299,7 +1297,6 @@ Table Instructions
 13. Or, push the value :math:`\I32.\CONST~\X{err}` to the stack.
 
 .. math::
-   ~\\[-1ex]
    \begin{array}{l}
    \begin{array}{lcl@{\qquad}l}
    S; F; \val~(\I32.\CONST~n)~(\TABLEGROW~x) &\stepto& S'; F; (\I32.\CONST~\X{sz})
@@ -1484,7 +1481,6 @@ Table Instructions
 21. Execute the instruction :math:`\TABLECOPY~x~y`.
 
 .. math::
-   ~\\[-1ex]
    \begin{array}{l}
    S; F; (\I32.\CONST~d)~(\I32.\CONST~s)~(\I32.\CONST~n)~(\TABLECOPY~x~y)
      \quad\stepto\quad S; F; \TRAP
@@ -1585,7 +1581,6 @@ Table Instructions
 27. Execute the instruction :math:`\TABLEINIT~x~y`.
 
 .. math::
-   ~\\[-1ex]
    \begin{array}{l}
    S; F; (\I32.\CONST~d)~(\I32.\CONST~s)~(\I32.\CONST~n)~(\TABLEINIT~x~y)
      \quad\stepto\quad S; F; \TRAP
@@ -1628,7 +1623,6 @@ Table Instructions
 5. Replace :math:`S.\SELEMS[a]` with the :ref:`element instance <syntax-eleminst>` :math:`\{\EIELEM~\epsilon\}`.
 
 .. math::
-   ~\\[-1ex]
    \begin{array}{l}
    \begin{array}{lcl@{\qquad}l}
    S; F; (\ELEMDROP~x) &\stepto& S'; F; \epsilon
@@ -1700,7 +1694,6 @@ Memory Instructions
 14. Push the value :math:`t.\CONST~c` to the stack.
 
 .. math::
-   ~\\[-1ex]
    \begin{array}{l}
    \begin{array}{lcl@{\qquad}l}
    S; F; (\I32.\CONST~i)~(t.\LOAD~\memarg) &\stepto& S; F; (t.\CONST~c)
@@ -1769,7 +1762,6 @@ Memory Instructions
 15. Push the value :math:`\V128.\CONST~c` to the stack.
 
 .. math::
-   ~\\[-1ex]
    \begin{array}{l}
    \begin{array}{lcl@{\qquad}l}
    S; F; (\I32.\CONST~i)~(\V128.\LOAD{M}\K{x}N\_\sx~\memarg) &\stepto&
@@ -1828,7 +1820,6 @@ Memory Instructions
 14. Push the value :math:`\V128.\CONST~c` to the stack.
 
 .. math::
-   ~\\[-1ex]
    \begin{array}{l}
    \begin{array}{lcl@{\qquad}l}
    S; F; (\I32.\CONST~i)~(\V128\K{.}\LOAD{N}\K{\_splat}~\memarg) &\stepto& S; F; (\V128.\CONST~c)
@@ -1883,7 +1874,6 @@ Memory Instructions
 13. Push the value :math:`\V128.\CONST~c` to the stack.
 
 .. math::
-   ~\\[-1ex]
    \begin{array}{l}
    \begin{array}{lcl@{\qquad}l}
    S; F; (\I32.\CONST~i)~(\V128\K{.}\LOAD{N}\K{\_zero}~\memarg) &\stepto& S; F; (\V128.\CONST~c)
@@ -1944,7 +1934,6 @@ Memory Instructions
 16. Push the value :math:`\V128.\CONST~c` to the stack.
 
 .. math::
-   ~\\[-1ex]
    \begin{array}{l}
    \begin{array}{lcl@{\qquad}l}
    S; F; (\I32.\CONST~i)~(\V128.\CONST~v)~(\V128\K{.}\LOAD{N}\K{\_lane}~\memarg~x) &\stepto& S; F; (\V128.\CONST~c)
@@ -2013,7 +2002,6 @@ Memory Instructions
 15. Replace the bytes :math:`\X{mem}.\MIDATA[\X{ea} \slice N/8]` with :math:`b^\ast`.
 
 .. math::
-   ~\\[-1ex]
    \begin{array}{l}
    \begin{array}{lcl@{\qquad}l}
    S; F; (\I32.\CONST~i)~(t.\CONST~c)~(t.\STORE~\memarg) &\stepto& S'; F; \epsilon
@@ -2079,7 +2067,6 @@ Memory Instructions
 14. Replace the bytes :math:`\X{mem}.\MIDATA[\X{ea} \slice N/8]` with :math:`b^\ast`.
 
 .. math::
-   ~\\[-1ex]
    \begin{array}{l}
    \begin{array}{lcl@{\qquad}l}
    S; F; (\I32.\CONST~i)~(\V128.\CONST~c)~(\V128.\STORE{N}\K{\_lane}~\memarg~x) &\stepto& S'; F; \epsilon
@@ -2161,7 +2148,6 @@ Memory Instructions
 11. Or, push the value :math:`\I32.\CONST~\X{err}` to the stack.
 
 .. math::
-   ~\\[-1ex]
    \begin{array}{l}
    \begin{array}{lcl@{\qquad}l}
    S; F; (\I32.\CONST~n)~\MEMORYGROW &\stepto& S'; F; (\I32.\CONST~\X{sz})
@@ -2239,7 +2225,6 @@ Memory Instructions
 21. Execute the instruction :math:`\MEMORYFILL`.
 
 .. math::
-   ~\\[-1ex]
    \begin{array}{l}
    S; F; (\I32.\CONST~d)~\val~(\I32.\CONST~n)~\MEMORYFILL
      \quad\stepto\quad S; F; \TRAP
@@ -2339,7 +2324,6 @@ Memory Instructions
 17. Execute the instruction :math:`\MEMORYCOPY`.
 
 .. math::
-   ~\\[-1ex]
    \begin{array}{l}
    S; F; (\I32.\CONST~d)~(\I32.\CONST~s)~(\I32.\CONST~n)~\MEMORYCOPY
      \quad\stepto\quad S; F; \TRAP
@@ -2444,7 +2428,6 @@ Memory Instructions
 27. Execute the instruction :math:`\MEMORYINIT~x`.
 
 .. math::
-   ~\\[-1ex]
    \begin{array}{l}
    S; F; (\I32.\CONST~d)~(\I32.\CONST~s)~(\I32.\CONST~n)~(\MEMORYINIT~x)
      \quad\stepto\quad S; F; \TRAP
@@ -2487,7 +2470,6 @@ Memory Instructions
 5. Replace :math:`S.\SDATAS[a]` with the :ref:`data instance <syntax-datainst>` :math:`\{\DIDATA~\epsilon\}`.
 
 .. math::
-   ~\\[-1ex]
    \begin{array}{l}
    \begin{array}{lcl@{\qquad}l}
    S; F; (\DATADROP~x) &\stepto& S'; F; \epsilon
@@ -2550,7 +2532,6 @@ Control Instructions
 6. :ref:`Enter <exec-instr-seq-enter>` the block :math:`\val^m~\instr^\ast` with label :math:`L`.
 
 .. math::
-   ~\\[-1ex]
    \begin{array}{lcl}
    F; \val^m~\BLOCK~\X{bt}~\instr^\ast~\END &\stepto&
      F; \LABEL_n\{\epsilon\}~\val^m~\instr^\ast~\END
@@ -2576,7 +2557,6 @@ Control Instructions
 6. :ref:`Enter <exec-instr-seq-enter>` the block :math:`\val^m~\instr^\ast` with label :math:`L`.
 
 .. math::
-   ~\\[-1ex]
    \begin{array}{lcl}
    F; \val^m~\LOOP~\X{bt}~\instr^\ast~\END &\stepto&
      F; \LABEL_m\{\LOOP~\X{bt}~\instr^\ast~\END\}~\val^m~\instr^\ast~\END
@@ -2602,7 +2582,6 @@ Control Instructions
    a. Execute the block instruction :math:`\BLOCK~\X{bt}~\instr_2^\ast~\END`.
 
 .. math::
-   ~\\[-1ex]
    \begin{array}{lcl}
    F; (\I32.\CONST~c)~\IF~\X{bt}~\instr_1^\ast~\ELSE~\instr_2^\ast~\END &\stepto&
      F; \BLOCK~\X{bt}~\instr_1^\ast~\END
@@ -2643,7 +2622,6 @@ Control Instructions
 8. Jump to the continuation of :math:`L`.
 
 .. math::
-   ~\\[-1ex]
    \begin{array}{lcl@{\qquad}l}
    \LABEL_n\{\instr^\ast\}~\XB^l[\val^n~(\BR~l)]~\END &\stepto& \val^n~\instr^\ast
    \end{array}
@@ -2667,7 +2645,6 @@ Control Instructions
    a. Do nothing.
 
 .. math::
-   ~\\[-1ex]
    \begin{array}{lcl@{\qquad}l}
    (\I32.\CONST~c)~(\BRIF~l) &\stepto& (\BR~l)
      & (\iff c \neq 0) \\
@@ -2696,7 +2673,6 @@ Control Instructions
    a. :ref:`Execute <exec-br>` the instruction :math:`(\BR~l_N)`.
 
 .. math::
-   ~\\[-1ex]
    \begin{array}{lcl@{\qquad}l}
    (\I32.\CONST~i)~(\BRTABLE~l^\ast~l_N) &\stepto& (\BR~l_i)
      & (\iff l^\ast[i] = l_i) \\
@@ -2733,7 +2709,6 @@ Control Instructions
 10. Jump to the instruction after the original call that pushed the frame.
 
 .. math::
-   ~\\[-1ex]
    \begin{array}{lcl@{\qquad}l}
    \FRAME_n\{F\}~\XB^k[\val^n~\RETURN]~\END &\stepto& \val^n
    \end{array}
@@ -2809,7 +2784,6 @@ Control Instructions
 19. :ref:`Invoke <exec-invoke>` the function instance at address :math:`a`.
 
 .. math::
-   ~\\[-1ex]
    \begin{array}{l}
    \begin{array}{lcl@{\qquad}l}
    S; F; (\I32.\CONST~i)~(\CALLINDIRECT~x~y) &\stepto& S; F; (\INVOKE~a)
@@ -2873,7 +2847,6 @@ When the end of a block is reached without a jump or trap aborting it, then the 
 6. Jump to the position after the |END| of the :ref:`structured control instruction <syntax-instr-control>` associated with the label :math:`L`.
 
 .. math::
-   ~\\[-1ex]
    \begin{array}{lcl@{\qquad}l}
    \LABEL_n\{\instr^\ast\}~\val^n~\END &\stepto& \val^n
    \end{array}
@@ -2921,7 +2894,6 @@ Invocation of :ref:`function address <syntax-funcaddr>` :math:`a`
 11. :ref:`Enter <exec-instr-seq-enter>` the instruction sequence :math:`\instr^\ast` with label :math:`L`.
 
 .. math::
-   ~\\[-1ex]
    \begin{array}{l}
    \begin{array}{lcl@{\qquad}l}
    S; \val^n~(\INVOKE~a) &\stepto& S; \FRAME_m\{F\}~\LABEL_m\{\}~\instr^\ast~\END~\END
@@ -2960,7 +2932,6 @@ When the end of a function is reached without a jump (i.e., |RETURN|) or trap ab
 8. Jump to the instruction after the original call.
 
 .. math::
-   ~\\[-1ex]
    \begin{array}{lcl@{\qquad}l}
    \FRAME_n\{F\}~\val^n~\END &\stepto& \val^n
    \end{array}
@@ -2982,7 +2953,6 @@ However, all store modifications must result in an :ref:`extension <extend-store
 Furthermore, the resulting store must be :ref:`valid <valid-store>`, i.e., all data and code in it is well-typed.
 
 .. math::
-   ~\\[-1ex]
    \begin{array}{l}
    \begin{array}{lcl@{\qquad}l}
    S; \val^n~(\INVOKE~a) &\stepto& S'; \result

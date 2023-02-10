@@ -183,7 +183,6 @@ Modules
 6. Post-condition: each :math:`\externtype_i` is :ref:`valid <valid-externtype>`.
 
 .. math::
-   ~ \\
    \begin{array}{lclll}
    \F{module\_imports}(m) &=& (\X{im}.\IMODULE, \X{im}.\INAME, \externtype)^\ast \\
      && \qquad (\iff \X{im}^\ast = m.\MIMPORTS \wedge {} \vdashmodule m : \externtype^\ast \to {\externtype'}^\ast) \\
@@ -211,7 +210,6 @@ Modules
 6. Post-condition: each :math:`\externtype'_i` is :ref:`valid <valid-externtype>`.
 
 .. math::
-   ~ \\
    \begin{array}{lclll}
    \F{module\_exports}(m) &=& (\X{ex}.\ENAME, \externtype')^\ast \\
      && \qquad (\iff \X{ex}^\ast = m.\MEXPORTS \wedge {} \vdashmodule m : \externtype^\ast \to {\externtype'}^\ast) \\
@@ -240,7 +238,6 @@ Module Instances
 3. Else, return :math:`\ERROR`.
 
 .. math::
-   ~ \\
    \begin{array}{lclll}
    \F{instance\_export}(m, \name) &=& m.\MIEXPORTS[i].\EIVALUE && (\iff m.\MEXPORTS[i].\EINAME = \name) \\
    \F{instance\_export}(m, \name) &=& \ERROR && (\otherwise) \\
@@ -305,7 +302,6 @@ Functions
 2. Return the new store paired with :math:`\X{result}`.
 
 .. math::
-   ~ \\
    \begin{array}{lclll}
    \F{func\_invoke}(S, a, v^\ast) &=& (S', {v'}^\ast) && (\iff \invoke(S, a, v^\ast) \stepto^\ast S'; F; {v'}^\ast) \\
    \F{func\_invoke}(S, a, v^\ast) &=& (S', \ERROR) && (\iff \invoke(S, a, v^\ast) \stepto^\ast S'; F; \TRAP) \\
@@ -399,7 +395,6 @@ Tables
 1. Return the length of :math:`\store.\STABLES[\tableaddr].\TIELEM`.
 
 .. math::
-   ~ \\
    \begin{array}{lclll}
    \F{table\_size}(S, a) &=& n &&
      (\iff |S.\STABLES[a].\TIELEM| = n) \\
@@ -419,7 +414,6 @@ Tables
    b. Else, return :math:`\ERROR`.
 
 .. math::
-   ~ \\
    \begin{array}{lclll}
    \F{table\_grow}(S, a, n, r) &=& S' &&
      (\iff S' = S \with \STABLES[a] = \growtable(S.\STABLES[a], n, r)) \\
@@ -511,7 +505,6 @@ Memories
 1. Return the length of :math:`\store.\SMEMS[\memaddr].\MIDATA` divided by the :ref:`page size <page-size>`.
 
 .. math::
-   ~ \\
    \begin{array}{lclll}
    \F{mem\_size}(S, a) &=& n &&
      (\iff |S.\SMEMS[a].\MIDATA| = n \cdot 64\,\F{Ki}) \\
@@ -531,7 +524,6 @@ Memories
    b. Else, return :math:`\ERROR`.
 
 .. math::
-   ~ \\
    \begin{array}{lclll}
    \F{mem\_grow}(S, a, n) &=& S' &&
      (\iff S' = S \with \SMEMS[a] = \growmem(S.\SMEMS[a], n)) \\
@@ -609,7 +601,6 @@ Globals
 5. Return the updated store.
 
 .. math::
-   ~ \\
    \begin{array}{lclll}
    \F{global\_write}(S, a, v) &=& S' && (\iff S.\SGLOBALS[a].\GITYPE = \MVAR~t \wedge S' = S \with \SGLOBALS[a].\GIVALUE = v) \\
    \F{global\_write}(S, a, v) &=& \ERROR && (\otherwise) \\

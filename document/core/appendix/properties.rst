@@ -94,7 +94,6 @@ Module instances are classified by *module contexts*, which are regular :ref:`co
 * Then the store is valid.
 
 .. math::
-   ~\\[-1ex]
    \frac{
      \begin{array}{@{}c@{}}
      (S \vdashfuncinst \funcinst : \functype)^\ast
@@ -368,7 +367,6 @@ Module instances are classified by *module contexts*, which are regular :ref:`co
   :math:`\{\CTYPES~\functype^\ast,` :math:`\CFUNCS~{\functype'}^\ast,` :math:`\CTABLES~\tabletype^\ast,` :math:`\CMEMS~\memtype^\ast,` :math:`\CGLOBALS~\globaltype^\ast,` :math:`\CELEMS~\reftype^\ast,` :math:`\CDATAS~{\ok}^n\}`.
 
 .. math::
-   ~\\[-1ex]
    \frac{
      \begin{array}{@{}c@{}}
      (\vdashfunctype \functype \ok)^\ast
